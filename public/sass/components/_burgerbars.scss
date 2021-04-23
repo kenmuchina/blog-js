@@ -1,0 +1,55 @@
+/*<div class = "burger">
+  <div class="line1"></div>
+  <div class="line2"></div>
+  <div class="line3"></div>
+</div>*/
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.421);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Creating the X when opening*/
+.line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.line2{
+    opacity: 0;
+}
+.line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*------------ Media query section--------- */
+/* Tablet*/
+@media screen (max-width: 1024px){
+    .nav-links { width: 60%; }
+}
+
+/* Mobile */
+@media screen(max-width: 768px){
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: trasform 0.5s easein;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    nav#burger {display: block;}
+    
+    .nav-action { transform: translateX(0%);}
+}
+

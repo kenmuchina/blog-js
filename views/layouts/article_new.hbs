@@ -1,0 +1,42 @@
+<h1>Add a new article?</h1>
+
+<form action="/newarticle/" method="Post">
+    <div class="url">  
+        <div>
+            <label for="url">Url:</label>
+            <div>
+                <input type="text" value="url" >
+            </div>
+        </div>
+    </div>
+    
+    <div class="title">
+        <div>
+            <label for="title">Title:</label>
+            <div>
+                <input type="text"  value="title">
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div>
+            <label for="content">Content:</label>
+            <div>
+                <textarea name="content" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <button type="submit">Update</button>
+        <button type="submit">Cancel</button>
+    </div>
+</form>
+
+<script>
+    var form = getElementByTag("form");
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
+</script>

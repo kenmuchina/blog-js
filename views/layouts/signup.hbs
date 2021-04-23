@@ -1,0 +1,96 @@
+ 
+
+
+<div>
+    <h2>Sign up</h2>
+    <form action="/authors/login" method="post">
+    <div class="firsname">  
+        <div>
+            <label for="firstname">First Name:</label>
+            <div>
+                <input type="text" value="firstname" >
+            </div>
+        </div>
+    </div>
+    
+    <div class="secondName">
+        <div>
+            <label for="secondName">Second Name:</label>
+            <div>
+                <input type="text"  value="secondName">
+            </div>
+        </div>
+    </div>
+    <div class="secondName">
+        <div>
+            <label for="secondName">Email :</label>
+            <div>
+                <input type="email"  value="secondName">
+            </div>
+        </div>
+    </div>
+    <div class="secondName">
+        <div>
+            <label for="secondName">Contact :</label>
+            <div>
+                <input type="number"  value="secondName">
+            </div>
+        </div>
+    </div>
+    <div class="secondName">
+        <div>
+            <label for="secondName">Password :</label>
+            <div>
+                <input type="password"  value="secondName">
+            </div>
+        </div>
+    </div>
+    <div class="secondName">
+        <div>
+            <label for="secondName">Profile Picture:</label>
+            <div>
+                <input type="file"  value="secondName">
+            </div>
+        </div>
+    </div>
+    <div class="secondName">
+        <div>
+            <label for="secondName">Field :</label>
+            <div>
+                <textarea name="content" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="secondName">
+        <div>
+            <label for="secondName">About :</label>
+            <div>
+                <textarea name="content" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+<!--    <div class="content">-->
+<!--        <div>-->
+<!--            <label for="email">Email :</label>-->
+<!--            <div>-->
+<!--                <textarea name="content" id="" cols="30" rows="10"></textarea>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    
+    <div>
+        <button type="submit">Sign up</button>
+    </div>
+    </form>
+</div>
+
+<script>
+    var form = getElementByTag("form");
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
+</script>
+
+

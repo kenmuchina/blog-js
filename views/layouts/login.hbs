@@ -1,0 +1,30 @@
+<form action="/newarticle/" method="Post">
+    <div class="email">  
+        <div>
+            <label for="email">Email :</label>
+            <div class="email-error"></div>            
+            <div>
+                <input type="email" value="email" required=true >
+            </div>
+        </div>
+    </div>
+    <div class="passwordlogin">  
+        <div>
+            <label for="password">Password :</label>
+            <div class="password-error"></div>
+            <div>
+                <input type="password" value="password" required=true >
+            </div>
+        </div>
+    </div>
+    <div>
+        <button type="submit">Log in</button>
+    </div>
+</form>
+
+<script>
+    var form = getElementByTag("form");
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
+</script>

@@ -1,0 +1,22 @@
+
+<!-- Here we need to query the database and retrive articles and display one at a time.-->
+<!--Will use a loop to display a hr, img(), p with a truncated  first paragraph(50) and link to the article itself.-->
+<!-- Also, the articles will be displayed accordding to time with the most recent at the top.-->
+
+<p>Development still in progress...</p>
+
+Handlebars.registerHelper("link", function(url){
+    var url = Handlebars.escapeExpression(url);
+    var result = "<a href='"localhost:3000/" + url + "/"'>" + "Read here.." + "</a>" 
+    return new Handlebars.SafeString(result)
+});
+
+{{#each articles}}
+    <hr>
+    <h3>{{ articles.title }}</h3>
+    {{ link articles.url }}
+    <br>
+{{/each}}
+  
+
+

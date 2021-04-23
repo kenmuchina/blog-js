@@ -1,0 +1,60 @@
+
+<h1> Edit an article?</h1>
+
+// I need to perform an ajax call here and json response.
+<form action="/editarticle/" method="POST">
+    <div class="searchBar">
+        <label for="chooseArticle">Choose article:</label>
+        <div>
+            <input type="text">
+        </div>
+        <button type="submit">Send</button>
+    </div
+</form>
+
+<form action="/editarticle/" method="PUT">
+    <div>id: {{}} </div>
+    
+    <div class="url">
+        <p>Old url: <span>{{}}</span></p>
+        <div>
+            <label for="url">New url:</label>
+            <div>
+                <input type="text" value="url" >
+            </div>
+        </div>
+    </div>
+    
+    <div class="title">
+        <p>Old title: <span>{{}}</span></p>
+        <div>
+            <label for="title">New title:</label>
+            <div>
+                <input type="text"  value="title">
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <p>Old content: <span>{{}}</span></p>
+        <div>
+            <label for="content">New content:</label>
+            <div>
+                <textarea name="content" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <button type="submit">Update</button>
+        <button type="submit">Cancel</button>
+    </div>
+</form>
+
+<script>
+    var form = getElementByTag("form");
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
+</script>
+
