@@ -1,4 +1,10 @@
-<form action="/newarticle/" method="Post">
+<nav></nav>
+
+<form action="/newarticle/" method="POST">
+    <div id="logo">
+        <span id="logoIcon"></span>
+        <span id="logoName">Mosina</span>
+    </div>
     <div class="email">  
         <div>
             <label for="email">Email :</label>
@@ -21,6 +27,7 @@
         <button type="submit">Log in</button>
     </div>
 </form>
+<p>Create a new account? <a href="http://localhost:3000/signup">Sign Up</a></p>
 
 <script>
     var form = getElementByTag("form");
@@ -28,3 +35,4 @@
         e.preventDefault();
     });
 </script>
+
