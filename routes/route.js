@@ -2,6 +2,18 @@
 const Author = require('../models/Author');
 
 module.exports = {
+    index : function (req, res, next){
+        // res.statusCode = 200;
+        // res.setHeader('Content-Type: 'text/plain');
+        // res.send();
+        // res.json();
+        Article.find({ limit: 2,sort: { 'timestamp': -1 }}).toArray(function (err, articles) {
+            if (err) {
+                console.log(err);
+            }
+            res.render( 'index.hbs', articles);
+        });
+    },
     login: (req, res, next) => {
         if (request.method== "POST") {
             if (req.body.email && req.body.password) {
@@ -61,14 +73,6 @@ module.exports = {
         } else {
             res.render('/article_edit.hbs');
         }
-    },
-    index : function (req, res, next){
-        Article.find({ limit: 2,sort: { 'timestamp': -1 }}).toArray(function (err, articles) {
-            if (err) {
-                console.log(err);
-            }
-            res.render( 'index.hbs', articles);
-        });
     },
     newarticle : function (req, res) {
         if (req.method == 'POST') {
